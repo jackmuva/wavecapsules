@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Playlist Capsule</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--<img src="../static/logo.png" alt="Lexus" class="logo" />-->
+      {% if message %}
+          <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <h1> Collection 1 </h1>
+      <p> Description of some sort </p>
+      <h2> To sign up for this capsule, put in the information below </h2>
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>Name:</h3>
+          <input
+            type="text"
+            name="customer"
+            placeholder="Name"
+          />
+        </div>
+        <div class="form-group">
+          <h3>Email:</h3>
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+          />
+        </div>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
